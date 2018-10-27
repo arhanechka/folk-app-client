@@ -7,7 +7,8 @@
 </template>
 
 <script>
-  import axios from 'axios'
+    import {axiosAPI} from '../controllers/axiosAPI'
+  const api = new axiosAPI();
 export default {
   name: 'about',
   data () {
@@ -17,11 +18,9 @@ export default {
   },
   methods: {
     fetchData(){
-      console.log("In axios");
-      axios.get("http://localhost:3000/about")
-      .then((response)=>{
-        console.log(response)
-        this.msg = response.data;
+      api.getAboutInformation()
+      .then((res)=>{
+        this.msg = res.data;
       });
     }
   }

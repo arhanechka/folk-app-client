@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+  import {axiosAPI} from '../controllers/axiosAPI'
+  const api = new axiosAPI();
 export default {
   name: 'video',
   data () {
@@ -16,11 +17,9 @@ export default {
   },
   methods: {
     fetchData(){
-      console.log("In axios");
-      axios.get("http://localhost:3000/video")
-      .then((response)=>{
-        console.log(response)
-        this.msg = response.data;
+      api.getVideoInformation()
+      .then((res)=>{
+        this.msg = res.data;
       });
     }
   }

@@ -6,7 +6,8 @@
 </template>
 
 <script>
-  import axios from 'axios'
+   import {axiosAPI} from '../controllers/axiosAPI'
+  const api = new axiosAPI();
 export default {
   name: 'audio',
   data () {
@@ -16,11 +17,9 @@ export default {
   },
   methods: {
     fetchData(){
-      console.log("In axios");
-      axios.get("http://localhost:3000/audio")
-      .then((response)=>{
-        console.log(response)
-        this.msg = response.data;
+      api.getAudioInformation()
+      .then((res)=>{
+        this.msg = res.data;
       });
     }
   }
