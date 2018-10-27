@@ -1,22 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.jpg">
-    <h1>{{ msg }}</h1>
-     <h1>{{ link }}</h1>
+     <div id = "links">
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/audio">Audio</router-link> |
+      <router-link to="/video">Video</router-link> |
+       <router-link to="/about">About</router-link>
+
+      </div>
+      <router-view/>
       </div>
 </template>
 
-<script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Ukrainian Folk App',
-      link: 'Log in'
-    }
-  }
-}
-</script>
+
 
 <style>
 #app {
@@ -28,8 +23,13 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1 {
   font-weight: normal;
+}
+
+h3 {
+  font-weight: lighter;
+  font-style: italic
 }
 
 ul {
