@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <img v-on:click='fetchData()' src="../assets/logo.jpg">
+   
     <h1 v-on:click='fetchData()'>{{ msg }}</h1>
   
       </div>

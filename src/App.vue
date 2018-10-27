@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img src="./assets/logo.jpg">
      <div id = "links">
       <router-link to="/home">Home</router-link> |
       <router-link to="/audio">Audio</router-link> |
@@ -8,6 +9,7 @@
 
       </div>
       <router-view/>
+       
       </div>
 </template>
 

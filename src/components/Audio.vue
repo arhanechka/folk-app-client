@@ -1,7 +1,6 @@
 <template>
   <div id="audio">
-    <img v-on:click='fetchData()' src="../assets/logo.jpg">
-    <h1>{{ msg }}</h1>
+    <h1 v-on:click='fetchData()'> {{ msg }}</h1>
     
       </div>
 </template>

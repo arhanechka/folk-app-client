@@ -1,7 +1,7 @@
 <template>
   <div id="about">
-    <img v-on:click='fetchData()' src="../assets/logo.jpg">
-    <h3>{{ msg }}</h3>
+    
+    <h3 v-on:click='fetchData()'>{{ msg }}</h3>
     
       </div>
 </template>
